@@ -44,8 +44,8 @@ const restaurant = {
 // OPTIONAL CHAINING (?.) - Chuỗi tùy chọn
 
 // WITH optional chaining
-// console.log(restaurant.openingHours.mon?.open);
-// console.log(restaurant.openingHours?.mon?.open);
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
 // => nếu cái trước dấu ? khác undefined hoặc null thì nó sẽ log ra open
 // Ngược lại nó sẽ return về undefined
 

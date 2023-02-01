@@ -102,5 +102,5 @@ console.log(guests);
 
 // Nullish: null and undefined (NOT 0 or '');
 // const guestCorrect = restaurant.numGuests ?? 10;
-// console.log(guestCorrect);
+console.log(guestCorrect);
 // => return: guestCorrect = 0

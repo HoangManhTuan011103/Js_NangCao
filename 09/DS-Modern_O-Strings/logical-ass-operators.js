@@ -45,19 +45,25 @@ const rest2 = {
     owner: 'Giovanni Rossi',
 };
 
-// 1) OR assignment operator
-// rest1.numGuests = rest1.numGuests || 10; // return truthy value
-// rest2.numGuests = rest2.numGuests || 10; // return truthy value
 
-// rest1.numGuests ||= 10;
-// rest2.numGuests ||= 10;
+
+// 1) OR assignment operator
+rest1.numGuests = rest1.numGuests || 10; // return truthy value = 10 vì thằng rest1.numGuests = 0 là falsy value
+rest2.numGuests = rest2.numGuests || 10; // return truthy value = 10 vì thằng rest2.numGuests = undefined là falsy value
+
+// rest1.numGuests = rest1.numGuests && 10; // return falsy value = 0
+// rest2.numGuests = rest2.numGuests && 10; // return falsy value = undefined
+
+rest1.numGuests ||= 10;
+rest2.numGuests ||= 10;
+
 
 
 // 2) nullish assignment operator  (null or undefined)
 // rest1.numGuests ??= 10;
 // rest2.numGuests ??= 10;
 
-rest1.owner = rest1.owner && '<ANONYMOUS>'; // return falsy value
+// rest1.owner = rest1.owner && '<ANONYMOUS>'; // return falsy value
 // => Nếu thuộc tính không có và không tồn tại nó sẽ khởi tạo giá trị là undefined
 rest2.owner = rest2.owner && '<ANONYMOUS>'; // return falsy value
 
@@ -66,6 +72,7 @@ rest2.owner = rest2.owner && '<ANONYMOUS>'; // return falsy value
 // => Trong trường hợp dùng cách này thì
 // => Nếu thuộc tính không có và không tồn tại nó sẽ bị ẩn đi
 // rest2.owner &&= '<ANONYMOUS>';
+
 
 
 console.log(rest1);
